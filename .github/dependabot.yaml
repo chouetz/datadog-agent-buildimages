@@ -8,13 +8,18 @@ updates:
       - python
     schedule:
       interval: monthly
-    ignore:
-      # pyyaml 6 is incompatible with awscli
-      # see https://github.com/DataDog/datadog-agent-buildimages/pull/207
-      - dependency-name: pyyaml
   - package-ecosystem: github-actions
     directory: /
     labels:
       - dependencies
+      - actions
     schedule:
       interval: monthly
+  - package-ecosystem: docker
+    directory: /    
+    labels:
+      - dependencies
+      - docker
+    schedule:
+      interval: daily
+
