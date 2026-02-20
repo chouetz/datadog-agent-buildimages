@@ -57,7 +57,7 @@ jobs:
           dda run update go "${{ inputs.go_version }}" --check-archive
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
         if: ${{ inputs.open_pr }}
         with:
           commit-message: "[push_to_datadog_agent] Update go version to ${{ inputs.go_version }}"
